@@ -31,24 +31,23 @@ Here is a list of the involved technologies:
     > git clone git@github.com:AhmedGamalBadawy/Mendix-assessment.git
 * Edit terraform.tfvars file to add jenkins_admin_password before running the code:
     > cd terraform \
-    > vim terraform.tfvars \
+    > vim terraform.tfvars 
 * Run Terraform code:
     > terraform init \
     > terraform validate \
     > terraform plan \
-    > terraform apply \
+    > terraform apply 
 * Jenkins should be up and running, you can check on K8S but also you can login to the Jenkins GUI:
     > http://<minikupe_ip>:port/ \
-    > Login using the username and password in terraform.tfvars\
+    > Login using the username and password in terraform.tfvars
 ## Application Deployment:
-* Create the deployment in kubernetes - it helps to pull the spring boot demo app docker images and deploy in K8S.
-    > kubectl create -f deployment.yml # your application will be deployed in kubernetes
-* View the container status
-    > kubectl get pods
-* To get the external Ip for accessing your application, please run
-    > kubectl get svc \
-    > minikube tunnel
-* Access your deployed spring boot application in kubernetes
-    > curl (external-ip)/hello/jackma
-* To view the kubernetes setup
-    > minikube dashboard
+
+* Make sure all required plugin are installed:
+    > Kubernetes \
+    > Docker pipeline \
+    > Git 
+* Create a new job in jenkins:
+From the Jenkins main page, by clicking on the new item, add a new freestyle job. 
+Find and mark a tick on “Restrict where this project can be run” and on the text field appear, enter the label name you gave to the pod template.
+* Either read the Jenkinsfile directly from the Git repo or paste the code inside Jenkinsfile to the pipeline definition.
+* As well, you need to add credentionals for the registery where you will push and pull images from (i.e. Dockerhub as in the code).
