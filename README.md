@@ -11,16 +11,22 @@ The project consiste of the following :
 * kubernetes folder that contains file (deploymentservice.yml) and it's being used to deploy app and service on K8S cluser.
 
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Involved Technologies
+Here is a list of the involved technologies:
 
-* [Kubernetes](https://kubernetes.io/)
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot](https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#production-ready)
+* Kubernetes
+* Terraform
+* Helm
+* Jenkins
+* Git
 
+# Install/Deploy Jenkins :
 
-# Deploy the spring application to kubernetes - Steps :
+## Prerequisites 
+* Kubernetes Cluster installed and running.
+* Install Terraform wherever you are going to run the terraform code.
 
+## Deployment
 * Build the demo spring boot application - docker image
     > mvn clean install \
     > docker build -t demo:0.1.0 .
