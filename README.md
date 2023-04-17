@@ -30,16 +30,16 @@ Here is a list of the involved technologies:
 * Clone the git repo:
     > git clone git@github.com:AhmedGamalBadawy/Mendix-assessment.git
 * Edit terraform.tfvars file to add jenkins_admin_password before running the code:
-    > cd terraform
-    > vim terraform.tfvars
+    > cd terraform \
+    > vim terraform.tfvars \
 * Run Terraform code:
-    > terraform init
-    > terraform validate
-    > terraform plan
-    > terraform apply
+    > terraform init \
+    > terraform validate \
+    > terraform plan \
+    > terraform apply \
 * Jenkins should be up and running, you can check on K8S but also you can login to the Jenkins GUI:
-    > http://<minikupe_ip>:port/
-    > Login using the username and password in terraform.tfvars
+    > http://<minikupe_ip>:port/ \
+    > Login using the username and password in terraform.tfvars\
 ## Application Deployment:
 * Create the deployment in kubernetes - it helps to pull the spring boot demo app docker images and deploy in K8S.
     > kubectl create -f deployment.yml # your application will be deployed in kubernetes
