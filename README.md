@@ -52,4 +52,4 @@ Here is a list of the involved technologies:
     Find and mark a tick on “Restrict where this project can be run” and on the text field appear, enter the label name you gave to the pod template.
     
 * Either read the Jenkinsfile directly from the Git repo or paste the code inside Jenkinsfile to the pipeline definition.
-* As well, you need to add credentionals for the registery where you will push and pull images from (i.e. Dockerhub as in the code).
+* As well, you need to add credentionals for the registery where you will push and pull images from (i.e. Dockerhub as in the code) and then update the pipeline code accordingly.
